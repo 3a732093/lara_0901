@@ -30,13 +30,13 @@
 
 <div class="row">
     <div class="col-lg-12">
-        <form action="/admin/posts/{{$post->id}}" method="POST" role="form">
+        <form action="{{route('admin.posts.update',$post->id)}}" method="POST" role="form">
             @method('PATCH')
             @csrf
 
             <div class="form-group">
                 <label for="title">標題：</label>
-                <input name="title" id="title" class="form-control" placeholder="請輸入文章標題" value="{{old('title',$post->title)}}">
+                <input name="title"  class="form-control" placeholder="請輸入文章標題" value="{{old('title',$post->title)}}">
             </div>
 
             <div class="form-group">

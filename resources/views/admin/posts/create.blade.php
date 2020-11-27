@@ -30,8 +30,8 @@
 
 <div class="row">
     <div class="col-lg-12">
-        <form role="form" action="/admin/posts" method="POST">
-
+        <form action="{{route('admin.posts.store')}}" method="POST" role="form" >
+           @method('POST')
             @csrf
             <div class="form-group">
                 <label for="title">標題：</label>
